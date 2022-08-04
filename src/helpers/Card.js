@@ -11,7 +11,8 @@ const Card = (src, description, alreadySelected) => {
 
 const createCards = (() => {
     images.forEach(img => {
-        let imgNoStaticMedia = img.substring(14);
+        let indexOfStaticMedia = img.indexOf("static/media");
+        let imgNoStaticMedia = img.substring(indexOfStaticMedia + 13);
         let endOfName = imgNoStaticMedia.indexOf(".");
         let description = imgNoStaticMedia.substring(0, 1).toUpperCase() + imgNoStaticMedia.substring(1, endOfName);
         cards.push(Card(img, description, false));
