@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.10dcb952.css",
+    "main.js": "/memory-card/static/js/main.0f06d22d.js",
+    "static/media/kevin.jpeg": "/memory-card/static/media/kevin.78c368c3c2cfde3d6747.jpeg",
+    "static/media/toby.png": "/memory-card/static/media/toby.c44eef1b198e5a824b97.png",
+    "static/media/andy.jpeg": "/memory-card/static/media/andy.b3a4704070184f9b95f9.jpeg",
+    "static/media/phyllis.jpeg": "/memory-card/static/media/phyllis.01c2337ac33867553162.jpeg",
+    "static/media/ryan.jpeg": "/memory-card/static/media/ryan.2ed6d7cf3654eb0caef8.jpeg",
+    "static/media/pam.jpeg": "/memory-card/static/media/pam.9f25d5365515dbe5a984.jpeg",
+    "static/media/creed.jpeg": "/memory-card/static/media/creed.a32ecb6d845d276ca809.jpeg",
+    "static/media/oscar.jpeg": "/memory-card/static/media/oscar.a2134fb85d1bed23410d.jpeg",
+    "static/media/erin.jpeg": "/memory-card/static/media/erin.4fe7741103d2c0adda1a.jpeg",
+    "static/media/kelly.jpeg": "/memory-card/static/media/kelly.aaf4d0fe5cf591c72c1d.jpeg",
+    "static/media/nellie.webp": "/memory-card/static/media/nellie.45201bdbdf0d5c8c5574.webp",
+    "static/media/angela.jpeg": "/memory-card/static/media/angela.51f516f942776bc310ec.jpeg",
+    "static/media/meredith.webp": "/memory-card/static/media/meredith.ee1bc49768480b7b758b.webp",
+    "static/media/dwight.webp": "/memory-card/static/media/dwight.5593627feefba9340932.webp",
+    "static/media/michael.jpeg": "/memory-card/static/media/michael.7dd26194b12794d756cf.jpeg",
+    "static/media/darryl.jpeg": "/memory-card/static/media/darryl.bd7003d13c8866bc9b3a.jpeg",
+    "static/media/stanley.jpeg": "/memory-card/static/media/stanley.18eb3ff9e4e838ca5ad8.jpeg",
+    "static/media/jim.jpeg": "/memory-card/static/media/jim.f46ee75b0fb034f588c1.jpeg",
+    "index.html": "/memory-card/index.html",
+    "main.10dcb952.css.map": "/memory-card/static/css/main.10dcb952.css.map",
+    "main.0f06d22d.js.map": "/memory-card/static/js/main.0f06d22d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10dcb952.css",
+    "static/js/main.0f06d22d.js"
+  ]
+}
