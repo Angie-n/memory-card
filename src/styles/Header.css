@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(39, 154, 216);
+    color: white;
+    min-height: 60px;
+    font-size: 1.8em;
+}
+
+header h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#scoreboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#scoreboard p:nth-child(2) {
+    margin-left: 20px;
+}
