@@ -1,0 +1,48 @@
+#restart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    background-color: white;
+    left: calc(50vw - 12px);
+    top: 50%;
+    width: 60vw;
+    height: auto;
+    min-height: 40vh;
+    max-height: 80vh;
+    margin-left: -30vw;
+    margin-top: -20vh;
+    font-size: max(1.8em, 1vw);
+    border: 1px solid rgb(205, 180, 167);
+    padding: 10px;
+}
+
+#restart button {
+    width: 50%;
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: inherit;
+    border: none;
+    text-decoration: underline;
+}
+
+#restart button:hover {
+    color: rgb(39, 154, 216);
+}
+
+#restart p {
+    font-size: 1.2em;
+}
+
+#restart blockquote {
+    font-style: italic;
+}
+
+@media only screen and (max-width: 750px) {
+    #restart {
+        width: 90vw;
+        margin-left: -45vw;
+    }
+}
