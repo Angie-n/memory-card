@@ -1,8 +1,7 @@
 #game {
     background-color: rgb(202, 131, 60);
-    width: 95vw;
-    margin: auto;
-    margin-top: 20px;
+    width: calc(95vw - 30px);
+    margin: 20px auto 20px auto;
     border: 15px solid saddlebrown;
 }
 
@@ -44,6 +43,6 @@
 .seen-icon {
     position: absolute;
     bottom: 5px;
-    right: 5px;
+    left: 5px;
     font-size: 1em;
 }
