@@ -1,7 +1,7 @@
 import { useState} from "react";
 import Header from "./components/Header";
 import Game from "./components/Game";
-import GameOver from "./components/GameOver";
+import Restart from "./components/Restart";
 import * as CardModule from "./helpers/Card";
 import "./styles/App.css";
 
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Header currentScore={currentScore} highScore={highScore}></Header>
       <Game cards={cards} setCards={setCards} currentScore={currentScore} setCurrentScore={setCurrentScore} highScore={highScore} setHighScore={setHighScore} isGameOver={isGameOver} setIsGameOver={setIsGameOver}></Game>
-      <GameOver cards={cards} currentScore={currentScore} setCurrentScore={setCurrentScore} isGameOver={isGameOver} setIsGameOver={setIsGameOver}></GameOver>
+      <Restart cards={cards} currentScore={currentScore} setCurrentScore={setCurrentScore} isGameOver={isGameOver} setIsGameOver={setIsGameOver}></Restart>
     </div>
   );
 }

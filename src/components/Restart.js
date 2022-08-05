@@ -1,4 +1,4 @@
-const GameOver = props => {
+const Restart = props => {
     const {cards, currentScore, setCurrentScore, isGameOver, setIsGameOver} = props;
 
     const resetGame = () => {
@@ -27,4 +27,4 @@ const GameOver = props => {
     );
 }
 
-export default GameOver;
+export default Restart;
