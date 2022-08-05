@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/Game.css";
 
 const Game = props => {
-    const {cards, setCards, currentScore, setCurrentScore, highScore, setHighScore, isGameOver, setIsGameOver} = props;
+    const {cards, setCards, currentScore, setCurrentScore, highScore, setHighScore, isGameOver, setIsGameOver, setWronglySelectedCard} = props;
     const [randomizedCards, setRandomizedCards] = useState(cards);
 
     const checkIfCardOrderSame = (oldOrder, newOrder) => {
@@ -65,8 +65,9 @@ const Game = props => {
     
     const handleCardClick = (event, card) => {
         if(card.alreadySelected) {
-            setIsGameOver(true);
             event.currentTarget.id = "incorrectly-selected-card";
+            setIsGameOver(true);
+            setWronglySelectedCard(card);
         }
         else {
             updateCardAsSeen(card);

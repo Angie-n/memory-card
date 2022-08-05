@@ -10,12 +10,13 @@ function App() {
   const [highScore, setHighScore] = useState(0);
   const [cards, setCards] = useState(CardModule.cards);
   const [isGameOver, setIsGameOver] = useState(false);
+  const [wronglySelectedCard, setWronglySelectedCard] = useState(null);
 
   return (
     <div className="App">
       <Header currentScore={currentScore} highScore={highScore}></Header>
-      <Game cards={cards} setCards={setCards} currentScore={currentScore} setCurrentScore={setCurrentScore} highScore={highScore} setHighScore={setHighScore} isGameOver={isGameOver} setIsGameOver={setIsGameOver}></Game>
-      <Restart cards={cards} currentScore={currentScore} setCurrentScore={setCurrentScore} isGameOver={isGameOver} setIsGameOver={setIsGameOver}></Restart>
+      <Game cards={cards} setCards={setCards} currentScore={currentScore} setCurrentScore={setCurrentScore} highScore={highScore} setHighScore={setHighScore} isGameOver={isGameOver} setIsGameOver={setIsGameOver} setWronglySelectedCard={setWronglySelectedCard}></Game>
+      <Restart cards={cards} currentScore={currentScore} setCurrentScore={setCurrentScore} isGameOver={isGameOver} setIsGameOver={setIsGameOver} wronglySelectedCard={wronglySelectedCard} setWronglySelectedCard={setWronglySelectedCard}></Restart>
     </div>
   );
 }
