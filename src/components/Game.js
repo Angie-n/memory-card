@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/Game.css";
 
 const Game = props => {
-    const {cards, setCards, currentScore, setCurrentScore, highScore, setHighScore, setIsGameOver} = props;
+    const {cards, setCards, currentScore, setCurrentScore, highScore, setHighScore, isGameOver, setIsGameOver} = props;
     const [randomizedCards, setRandomizedCards] = useState(cards);
 
     const checkIfCardOrderSame = (oldOrder, newOrder) => {
@@ -32,42 +32,48 @@ const Game = props => {
         setRandomizedCards(newOrder);
     },[currentScore]);
 
+    useEffect(() => {
+        if(isGameOver) {
+            document.getElementById("game").style.pointerEvents = "none";
+            let cardsDOM = document.getElementById("game").getElementsByTagName("li");
+            [...cardsDOM].forEach((card, i) => {
+                if(randomizedCards[i].alreadySelected) {
+                    let icon = document.createElement("i");
+                    icon.classList.add("fa-solid");
+                    icon.classList.add("fa-eye");
+                    icon.classList.add("seen-icon");
+                    card.append(icon);
+                }
+            });
+        }
+        else {
+            document.getElementById("game").style.filter = "none";
+            let highlightedCard = document.getElementById("incorrectly-selected-card");
+            if(highlightedCard) highlightedCard.id = "";
+            document.getElementById("game").style.pointerEvents = "auto";
+            let seenIcons = [...document.getElementsByClassName("seen-icon")];
+            seenIcons.forEach(s => s.remove());
+        }
+    },[isGameOver]);
+
     const updateCardAsSeen = card => {
         let i = cards.indexOf(card);
         let updatedCards = [...cards];
         updatedCards[i].alreadySelected = true;
         setCards(updatedCards);
     }
-
-    const gameOverStylings = () => {
-        document.getElementById("game").style.pointerEvents = "none";
-        let cardsDOM = document.getElementById("game").getElementsByTagName("li");
-        [...cardsDOM].forEach((card, i) => {
-            if(randomizedCards[i].alreadySelected) {
-                let icon = document.createElement("i");
-                icon.classList.add("fa-solid");
-                icon.classList.add("fa-eye");
-                icon.classList.add("seen-icon");
-                card.append(icon);
-            }
-        });
-    }
     
     const handleCardClick = (event, card) => {
         if(card.alreadySelected) {
             setIsGameOver(true);
             event.currentTarget.id = "incorrectly-selected-card";
-            gameOverStylings();
         }
         else {
             updateCardAsSeen(card);
             let newScore = currentScore + 1;
             setCurrentScore(newScore);
             if(newScore > highScore) setHighScore(newScore);
-            if(newScore === cards.length) {
-                setIsGameOver(true);
-                gameOverStylings();
-            }
+            if(newScore === cards.length) setIsGameOver(true);
         }
     }
 
